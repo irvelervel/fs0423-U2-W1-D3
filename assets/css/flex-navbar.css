@@ -1,0 +1,60 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: orangered;
+  color: white;
+  /* proprietà flex per la navbar da mobile */
+  display: flex;
+  flex-direction: column;
+  /* - dichiarando la flex-direction a column, setto la Y con MAIN-AXIS */
+  /* - di conseguenza, justify-content lavorerà sulla Y (lavora sempre sulla main) */
+  /* - e quindi se io voglio centrare gli elementi orizzontalmente, devo lavorare sulla CROSS-AXIS */
+  /* - e quindi uso align-items */
+  align-items: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  /* definiamo un contenitore flex per ordinare gli li verticalmente */
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  margin: 0.2em 0;
+}
+
+nav form {
+  margin: 0.5em 0;
+}
+
+nav form button {
+  border: 0;
+  color: orangered;
+  background-color: white;
+  padding: 0.2em 1em;
+  border-radius: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75em 1em;
+    border-radius: 0.5em;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin-right: 0.5em;
+  }
+}
