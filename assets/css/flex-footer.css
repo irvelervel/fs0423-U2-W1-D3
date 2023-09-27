@@ -1,0 +1,64 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#top {
+  background-color: #04a2b0;
+  flex-grow: 1.6;
+  /* questo flex child diventerà anche un flex container! */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#top p:first-of-type {
+  margin-bottom: 0;
+}
+
+#top div i {
+  font-size: 2em;
+  margin-right: 1em;
+}
+
+#mid {
+  background-color: #015d5f;
+  padding: 1em;
+}
+
+#mid ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+#bottom {
+  background-color: #9ed3ca;
+  flex-grow: 0.8;
+  /* questo flex child diventerà anche un flex container! */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom p:first-of-type {
+  /* primo p del #bottom */
+  margin-bottom: 0;
+}
+
+#bottom p:last-of-type {
+  /* secondo (e ultimo) p del #bottom */
+  margin-top: 0;
+}

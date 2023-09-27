@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Footer</title>
+    <link rel="stylesheet" href="assets/css/flex-footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <footer>
+      <div id="top">
+        <p>Questions?</p>
+        <p>
+          Write us at
+          <a href="mailto:epicode@epicode.com">epicode@epicode.com</a>
+        </p>
+        <div>
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-youtube-play"></i>
+          <i class="fa fa-instagram"></i>
+        </div>
+      </div>
+      <div id="mid">
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Use</li>
+          <li>Copyright</li>
+        </ul>
+      </div>
+      <div id="bottom">
+        <p><span id="current-year"></span>, all rights reserved.</p>
+        <p>Created with love at EPICODE</p>
+      </div>
+    </footer>
+    <script>
+      const yearSpan = document.getElementById('current-year')
+      const currentYear = new Date().getFullYear() // oggi torna 2023
+      yearSpan.innerText = currentYear
+    </script>
+  </body>
+</html>
