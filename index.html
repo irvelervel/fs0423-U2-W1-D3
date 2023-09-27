@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex example</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 300px;
+        /* background-color: lightcoral; */
+        display: flex;
+        /* non modifico la flex-direction, quindi il suo valore rimane "row", questo determina che la main axis è la x */
+        justify-content: center; /* poichè la flex-direction è rimasta a row, justify content lavorerà sulla x */
+        align-items: flex-start; /* poichè la flex-direction è rimasta a row, align items lavorerà sulla y */
+      }
+
+      .flex-item {
+        background-color: orange;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* prendo il 4° flex child */
+      .flex-item:nth-of-type(4) {
+        flex-grow: 1;
+      }
+
+      /* prendo l'8° flex child */
+      .flex-item:nth-of-type(8) {
+        flex-grow: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+      <div class="flex-item">7</div>
+      <div class="flex-item">8</div>
+      <div class="flex-item">9</div>
+      <div class="flex-item">10</div>
+    </div>
+    <script>
+      const containerDiv = document.getElementsByClassName('container')[0]
+      const rgb1 = Math.floor(Math.random() * 256) // 0-255
+      const rgb2 = Math.floor(Math.random() * 256) // 0-255
+      const rgb3 = Math.floor(Math.random() * 256) // 0-255
+      containerDiv.style.backgroundColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`
+    </script>
+  </body>
+</html>
